@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "main": "bld/main.js",
+  "bin": {
+    "hrf": "bld/program/main.js"
+  },
   "author": "yggdrasilqh",
   "repository": "https://github.com/Yggdrasilqh/hrf",
   "scripts": {
@@ -12,12 +15,13 @@
     "test": "yarn lint-prettier && yarn build && yarn lint"
   },
   "dependencies": {
-    "tslib": "^2.4.1",
-    "oclif": "^3.4.2"
+    "@oclif/core": "^1.22.0",
+    "tslib": "^2.4.1"
   },
   "devDependencies": {
     "@mufan/code": "^0.2.15",
     "@mufan/eslint-plugin": "^0.1.76",
+    "@types/node": "^18.11.17",
     "eslint": "^8.30.0",
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
