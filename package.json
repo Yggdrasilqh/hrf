@@ -1,0 +1,12 @@
+{
+  "name": "hrf",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "https://github.com/Yggdrasilqh/hrf",
+  "author": "yggdrasilqh",
+  "license": "MIT",
+  "dependencies": {
+    "oclif": "^3.4.2"
+  },
+  "devDependencies": {}
+}
