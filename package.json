@@ -12,15 +12,35 @@
     "build": "rimraf ./bld && tsc --build",
     "lint": "run-in-every eslint-project --parallel --echo -- eslint --config {configFileName} --no-error-on-unmatched-pattern .",
     "lint-prettier": "prettier --check .",
-    "test": "yarn lint-prettier && yarn build && yarn lint"
+    "test": "yarn lint-prettier && yarn build && yarn lint",
+    "dev": "node bld/program/main.js"
+  },
+  "oclif": {
+    "bin": "hrf",
+    "dirname": "hrf",
+    "commands": "./bld/program/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
   },
   "dependencies": {
     "@oclif/core": "^1.22.0",
+    "@oclif/plugin-help": "^5.1.22",
+    "@oclif/plugin-plugins": "^2.1.12",
+    "lodash": "^4.17.21",
     "tslib": "^2.4.1"
   },
   "devDependencies": {
     "@mufan/code": "^0.2.15",
     "@mufan/eslint-plugin": "^0.1.76",
+    "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.17",
     "eslint": "^8.30.0",
     "prettier": "^2.8.1",
