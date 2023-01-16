@@ -2,6 +2,12 @@
   "extends": "@mufan/code/tsconfig.json",
   "compilerOptions": {
     "composite": true,
-    "outDir": "../../bld/test"
-  }
+    "outDir": "../../bld/test",
+    "types": ["jest"]
+  },
+  "references": [
+    {
+      "path": "../program"
+    }
+  ]
 }
